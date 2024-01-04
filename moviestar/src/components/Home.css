@@ -1,0 +1,49 @@
+/* Home.css */
+
+/* Cette classe centre le texte à l'intérieur de son conteneur */
+.centered-text {
+  text-align: center;
+}
+
+/* La classe pour la barre de navigation horizontale */
+.horizontal-tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centrer la barre de navigation horizontale */
+  background-color: #333; /* Couleur de fond de la barre de navigation */
+}
+
+/* Les éléments de la barre de navigation horizontale */
+.horizontal-tabs li {
+  margin-right: 20px;
+}
+
+/* Les liens dans la barre de navigation horizontale */
+.horizontal-tabs a {
+  text-decoration: none;
+  color: white; /* Couleur du texte des liens */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+}
+
+/* Les styles au survol des liens dans la barre de navigation horizontale */
+.horizontal-tabs a:hover {
+  color: #007bff; /* Couleur du texte au survol */
+  background-color: #555; /* Couleur de fond au survol */
+}
+/* Home.css */
+
+/* Styles pour le texte du résumé */
+.summary-text {
+  text-align: justify; /* Alignement justifié */
+  font-size: 16px;
+  line-height: 1.5; /* Espacement des lignes */
+  color: white; /* Couleur du texte */
+  background-color: red; /* Couleur de fond rouge */
+  padding: 20px; /* Marge intérieure */
+  margin: 20px 0; /* Marge extérieure en haut et en bas */
+}
