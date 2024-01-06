@@ -1,14 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// Importations des dépendances et des fichiers de style nécessaires
+import logo from './logo.svg'; // Importation du logo
+import './App.css'; // Importation des styles CSS
 
+// Composant principal de l'application
 function App() {
   return (
+    // Élément racine de l'application avec la classe "App"
     <div className="App">
+      {/* En-tête de l'application avec la classe "App-header" */}
       <header className="App-header">
+        {/* Logo de l'application */}
         <img src={logo} className="App-logo" alt="logo" />
+
+        {/* Paragraphe indiquant comment éditer le fichier src/App.js */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
+        {/* Lien vers le site officiel de React */}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -22,4 +31,5 @@ function App() {
   );
 }
 
+// Exportation du composant App
 export default App;

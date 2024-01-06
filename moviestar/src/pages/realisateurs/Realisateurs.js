@@ -1,15 +1,17 @@
-// src/pages/Realisateurs.js
 import React, { useEffect, useState } from 'react';
 import RealisateursTitle from './RealisateursTitle';
 import SearchBar from '../../components/SearchBar';
-import RealisateursList from "./RealisateurList";
+import RealisateursList from './RealisateurList';
 import ModifyRealisateurModal from './ModifyRealisateurModal';
-import backendRealisateurService from "../../services/backendRealisateursService";
+import backendRealisateurService from '../../services/backendRealisateursService';
 import Modal from './Modal'; // Import Modal component
 
+/**
+ * Composant Realisateurs pour afficher la liste des réalisateurs.
+ * @returns {JSX.Element} Élément JSX représentant la page des réalisateurs.
+ */
 const Realisateurs = () => {
     const [realisateurs, setRealisateurs] = useState([]);
-    const [selectedItemIndex, setSelectedItemIndex] = useState(null);
     const [filteredRealisateurs, setFilteredRealisateurs] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const [modalFilms, setModalFilms] = useState({ data: [], realisateurName: '' });
@@ -17,12 +19,17 @@ const Realisateurs = () => {
     const [selectedRealisateur, setSelectedRealisateur] = useState(null);
 
     useEffect(() => {
+        // Charger la liste des réalisateurs lors du montage du composant
         backendRealisateurService.getAllRealisateurs().then((response) => {
             setRealisateurs(response.data);
             setFilteredRealisateurs(response.data);
         });
     }, []);
 
+    /**
+     * Fonction de recherche pour filtrer les réalisateurs en fonction du terme de recherche.
+     * @param {string} searchTerm - Terme de recherche.
+     */
     const handleSearch = (searchTerm) => {
         const filteredList = realisateurs.filter((realisateur) =>
             realisateur.nom.toLowerCase().includes(searchTerm.toLowerCase())
@@ -30,6 +37,10 @@ const Realisateurs = () => {
         setFilteredRealisateurs(filteredList);
     };
 
+    /**
+     * Gérer le clic sur un réalisateur.
+     * @param {Object} realisateur - Réalisateur sélectionné.
+     */
     const handleRealisateurClick = async (realisateur) => {
         try {
             console.log('Clicked Realisateur:', realisateur);
@@ -62,16 +73,27 @@ const Realisateurs = () => {
         }
     };
 
+    /**
+     * Gérer la fermeture de la modal.
+     */
     const handleModalClose = () => {
         setModalOpen(false);
         setModalFilms({ data: [], realisateurName: '' });
     };
 
+    /**
+     * Gérer la modification d'un réalisateur.
+     * @param {Object} realisateur - Réalisateur à modifier.
+     */
     const handleModifyRealisateur = (realisateur) => {
         setSelectedRealisateur(realisateur);
         setModifyModalOpen(true);
     };
 
+    /**
+     * Gérer l'enregistrement d'un réalisateur modifié.
+     * @param {Object} modifiedInfo - Informations modifiées du réalisateur.
+     */
     const handleSaveModifiedRealisateur = (modifiedInfo) => {
         console.log('Trying to save Modified Realisateur Info:', modifiedInfo);
 
@@ -82,7 +104,7 @@ const Realisateurs = () => {
         );
 
         setModifyModalOpen(false);
-        setSelectedRealisateur(null); // Reset selected realisateur after modification
+        setSelectedRealisateur(null); // Réinitialiser le réalisateur sélectionné après la modification
     };
 
     return (
@@ -94,13 +116,12 @@ const Realisateurs = () => {
             </button>
             <RealisateursList
                 realisateurs={filteredRealisateurs}
-                selectedItemIndex={selectedItemIndex}
                 handleRealisateurClick={handleRealisateurClick}
             />
 
-            {/* Add Modal component */}
+            {/* Ajouter le composant Modal */}
             <Modal isOpen={isModalOpen} handleClose={handleModalClose} films={modalFilms} />
-            {/* Add ModifyRealisateurModal */}
+            {/* Ajouter ModifyRealisateurModal */}
             <ModifyRealisateurModal
                 isOpen={modifyModalOpen}
                 handleClose={() => setModifyModalOpen(false)}

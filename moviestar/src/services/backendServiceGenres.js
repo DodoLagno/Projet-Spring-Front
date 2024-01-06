@@ -1,9 +1,20 @@
 // backendServiceGenres.js
-const API_BASE_URL = 'http://localhost:8080'; // Replace with your backend URL
 
+// Assurez-vous que vous définissez API_BASE_URL quelque part, peut-être dans un fichier de configuration
+const API_BASE_URL = 'http://localhost:8080'; // Remplacez cela par l'URL réelle de votre backend
+
+/**
+ * Service gérant les opérations liées aux genres depuis le backend.
+ * @namespace backendServiceGenres
+ */
 const backendServiceGenres = {
 
-    // Fonction pour recuperer la liste des genres
+    /**
+     * Récupère la liste des genres depuis le backend.
+     * @memberof backendServiceGenres
+     * @returns {Promise} Une promesse qui se résout avec la liste des genres.
+     * @throws {Error} Une erreur si la récupération des genres échoue.
+     */
     fetchGenres: async () => {
         try {
             const response = await fetch(`${API_BASE_URL}/genres`);
@@ -15,7 +26,13 @@ const backendServiceGenres = {
         }
     },
 
-    // Fonction pour ajouter un genre
+    /**
+     * Ajoute un nouveau genre au backend.
+     * @memberof backendServiceGenres
+     * @param {string} genreName - Le nom du genre à ajouter.
+     * @returns {Promise} Une promesse qui se résout avec les données du genre ajouté.
+     * @throws {Error} Une erreur si l'ajout du genre échoue.
+     */
     addGenre: async (genreName) => {
         try {
             const response = await fetch(`${API_BASE_URL}/genres`, {
@@ -34,7 +51,14 @@ const backendServiceGenres = {
         }
     },
 
-    // Fonction pour modifier un genre
+    /**
+     * Modifie un genre existant sur le backend.
+     * @memberof backendServiceGenres
+     * @param {number} genreId - L'ID du genre à modifier.
+     * @param {Object} updatedGenre - Les informations mises à jour pour le genre.
+     * @returns {Promise} Une promesse qui se résout avec les données du genre modifié.
+     * @throws {Error} Une erreur si la modification du genre échoue.
+     */
     updateGenre: async (genreId, updatedGenre) => {
         try {
             const response = await fetch(`${API_BASE_URL}/genres/${genreId}`, {
@@ -53,7 +77,13 @@ const backendServiceGenres = {
         }
     },
 
-    // Fonction pour supprimer un genre
+    /**
+     * Supprime un genre existant depuis le backend.
+     * @memberof backendServiceGenres
+     * @param {number} genreId - L'ID du genre à supprimer.
+     * @returns {Promise} Une promesse qui se résout avec les données du genre supprimé.
+     * @throws {Error} Une erreur si la suppression du genre échoue.
+     */
     deleteGenre: async (genreId) => {
         try {
             const response = await fetch(`${API_BASE_URL}/genres/${genreId}`, {

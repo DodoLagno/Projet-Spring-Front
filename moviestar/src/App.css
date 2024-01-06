@@ -1,66 +1,90 @@
+/* App.css */
+
+/**
+ * Styles pour la classe principale de l'application.
+ */
 .App {
-  text-align: center;
+  text-align: center; /* Alignement du texte au centre */
 }
 
+/**
+ * Styles pour le logo de l'application.
+ */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Hauteur relative basée sur la hauteur de la vue (viewport) */
+  pointer-events: none; /* Empêche les événements de pointer sur le logo */
 }
 
+/**
+ * Styles spécifiques pour l'animation du logo lorsque le mouvement est autorisé.
+ */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Animation de rotation infinie sur l'axe linéaire */
   }
 }
 
+/**
+ * Styles pour l'en-tête de l'application.
+ */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* Couleur de fond de l'en-tête */
+  min-height: 100vh; /* Hauteur minimale égale à 100% de la hauteur de la vue (viewport) */
+  display: flex; /* Utilise le modèle de boîte flexible */
+  flex-direction: column; /* Aligne les éléments en colonne */
+  align-items: center; /* Aligne les éléments au centre sur l'axe transversal */
+  justify-content: center; /* Centre les éléments sur l'axe principal */
+  font-size: calc(10px + 2vmin); /* Calcule la taille de la police en fonction de la taille de la vue */
+  color: white; /* Couleur du texte en blanc */
 }
 
+/**
+ * Styles pour le lien dans l'application.
+ */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Couleur du lien */
 }
 
+/**
+ * Définition de l'animation de rotation pour le logo de l'application.
+ */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Rotation initiale de 0 degrés */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rotation finale de 360 degrés (une révolution complète) */
   }
 }
 
-/* Ajout de ma parts */
-/* src/App.css */
+/* Ajout de ma part */
+/* Styles pour la barre de navigation */
 nav {
-  background-color: #333;
-  padding: 10px;
+  background-color: #333; /* Couleur de fond de la barre de navigation */
+  padding: 10px; /* Espacement intérieur de 10 pixels */
 }
 
+/* Styles pour la liste non ordonnée (ul) dans la barre de navigation */
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  list-style-type: none; /* Supprime les puces de la liste */
+  margin: 0; /* Supprime les marges extérieures */
+  padding: 0; /* Supprime les marges intérieures */
+  display: flex; /* Utilise le modèle de boîte flexible */
 }
 
+/* Styles pour les éléments de liste (li) dans la barre de navigation */
 li {
-  margin-right: 20px;
+  margin-right: 20px; /* Marge à droite de chaque élément de liste */
 }
 
+/* Styles pour les liens (a) dans la barre de navigation */
 a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  color: white; /* Couleur du texte en blanc */
+  text-decoration: none; /* Supprime la décoration du texte des liens */
+  font-weight: bold; /* Met en gras le texte des liens */
 }
 
+/* Styles pour les liens (a) au survol dans la barre de navigation */
 a:hover {
-  color: lightgray;
+  color: lightgray; /* Couleur du texte en gris clair au survol */
 }

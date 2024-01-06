@@ -1,9 +1,11 @@
 /* src/styles.css */
+
+/* Style global pour le corps de la page */
 body {
-    background-color: black;
-    color: white; /* Set text color to white for better visibility on a dark background */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+    background-color: black; /* Couleur de fond noire */
+    color: white; /* Couleur du texte blanc pour une meilleure visibilité sur un fond sombre */
+    margin: 0; /* Supprime la marge par défaut du corps */
+    padding: 0; /* Supprime le rembourrage par défaut du corps */
 }
 
-/* Add any additional global styles here */
+/* Ajoutez ici d'autres styles globaux si nécessaire */

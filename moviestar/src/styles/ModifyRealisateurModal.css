@@ -1,4 +1,8 @@
 /* ModifyRealisateurModal.css */
+
+/**
+ * Styles pour la modale de modification d'un réalisateur.
+ */
 .modify-realisateur-modal {
     display: none;
     position: fixed;
@@ -11,24 +15,33 @@
     align-items: center;
 }
 
+/**
+ * Styles pour la modale ouverte.
+ */
 .modify-realisateur-modal.open {
     display: flex;
 }
 
+/**
+ * Styles pour le contenu de la modale.
+ */
 .modal-content {
-    background: #ffffff;
-    color: #000000;
+    background: #ffffff; /* Couleur de fond de la modale */
+    color: #000000; /* Couleur du texte de la modale */
     padding: 20px;
     border-radius: 8px;
     text-align: center;
 }
 
+/**
+ * Styles pour le bouton de fermeture de la modale.
+ */
 .modal-close {
-    background: #000000;
-    color: #ffffff;
+    background: #000000; /* Couleur de fond du bouton fermer */
+    color: #ffffff; /* Couleur du texte du bouton fermer */
     border: none;
     padding: 8px 16px;
     cursor: pointer;
 }
 
-/* Add additional styling as needed */
+/* Ajoutez des styles supplémentaires au besoin */
