@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line
 import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css';
 
@@ -8,32 +7,32 @@ const Navbar = () => {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/" exact activeClassName="active">
+                    <NavLink to="/" activeclassName="active" exact>
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/films" activeClassName="active">
+                    <NavLink to="/films" activeclassName="active">
                         Films
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/genres" activeClassName="active">
+                    <NavLink to="/genres" activeclassName="active">
                         Genres
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/acteurs" activeClassName="active">
+                    <NavLink to="/acteurs" activeclassName="active">
                         Acteurs
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/rechercheavancee" activeClassName="active">
+                    <NavLink to="/rechercheavancee" activeclassName="active">
                         Recherche Avancée
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/realisateurs" activeClassName="active">
+                    <NavLink to="/realisateurs" activeclassName="active">
                         Réalisateurs
                     </NavLink>
                 </li>
@@ -41,5 +40,6 @@ const Navbar = () => {
         </nav>
     );
 };
+
 
 export default Navbar;

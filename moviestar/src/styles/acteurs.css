@@ -21,3 +21,17 @@
 .acteurs-list li {
   margin-bottom: 10px;
 }
+
+.acteur-item {
+  /* Styles de base pour les éléments d'acteur */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.acteur-item.selected {
+  /* Styles supplémentaires pour les éléments d'acteur sélectionnés */
+  background-color: #eee;
+  border-color: #999;
+}

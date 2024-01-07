@@ -1,7 +1,7 @@
 // src/services/backendActeursService.js
 import axios from 'axios';
-
-const BASE_URL = 'http://localhost:8080';
+// eslint-disable-next-line
+const BASE_URL = 'http://localhost:8080';  // Décommentez cette ligne
 
 const handleError = (error) => {
     console.error('Error during API request:', error);
@@ -18,7 +18,6 @@ const handleError = (error) => {
 
     throw error;
 };
-
 const backendActeursService = {
     getAllActeurs: () => axios.get(`${BASE_URL}/acteurs`).catch(handleError),
     getActeurById: (id) => axios.get(`${BASE_URL}/acteurs/${id}`).catch(handleError),

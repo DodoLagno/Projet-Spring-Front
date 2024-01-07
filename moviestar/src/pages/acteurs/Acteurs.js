@@ -88,6 +88,8 @@ const Acteurs = () => {
         setSelectedActeur(null); // Reset selected acteur after modification
     };
 
+    console.log('Acteurs avant rendu :', filteredActeurs);
+
     return (
         <div>
             <ActeursTitle />
