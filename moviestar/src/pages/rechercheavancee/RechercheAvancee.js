@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import ActeursCommuns2Films from './ActeursCommuns2Films';
 import FilmsCommuns2Acteurs from './FilmsCommuns2Acteurs';
 import FilmsEntre2Annees from "./FilmsEntre2Annees";
 import FilmsEntre2Annees1Acteur from "./FilmsEntre2Annees1Acteur";
+import  "./RechercheAvancee.css";
 import Modal from './Modal';
 
-// Modal component
+const Wrapper = styled.div`
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+`;
+
+const Title = styled.h2`
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+`;
+
 const RechercheAvancee = () => {
     const [modalResults, setModalResults] = useState([]);
     const [modalTitle, setModalTitle] = useState('');
@@ -22,8 +36,8 @@ const RechercheAvancee = () => {
     };
 
     return (
-        <div>
-            <h2>Recherche Avancée</h2>
+        <Wrapper>
+            <Title>Recherche Avancée</Title>
             <ActeursCommuns2Films onUpdateModalResults={handleUpdateModalResults} />
             <FilmsCommuns2Acteurs onUpdateModalResults={handleUpdateModalResults} />
             <FilmsEntre2Annees onUpdateModalResults={handleUpdateModalResults} />
@@ -32,7 +46,7 @@ const RechercheAvancee = () => {
             {isModalOpen && (
                 <Modal title={modalTitle} results={modalResults} onClose={handleCloseModal} />
             )}
-        </div>
+        </Wrapper>
     );
 };
 
