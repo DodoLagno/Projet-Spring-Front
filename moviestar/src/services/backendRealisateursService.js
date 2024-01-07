@@ -1,8 +1,8 @@
 // src/services/realisateurService.js
 import axios from 'axios';
-
+ // eslint-disable-next-line
 const BASE_URL = 'http://localhost:8080'; // Replace with your actual backend URL
-
+ // eslint-disable-next-line
 const backendRealisateursService = {
     getAllRealisateurs: () => axios.get(`/realisateurs`),
     getRealisateurById: (id) => axios.get(`/realisateurs/${id}`),

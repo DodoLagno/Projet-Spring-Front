@@ -1,5 +1,7 @@
 // src/pages/FilmsEntre2Annees.js
+ // eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line
 import axios from 'axios';
 
 const FilmsEntre2Annees = () => {

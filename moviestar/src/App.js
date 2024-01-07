@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/home/Home';
 import Acteurs from './pages/acteurs/Acteurs';
@@ -11,19 +12,19 @@ import './styles/global.css';
 
 const App = () => {
   return (
-      <Router>
-        <div>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/acteurs" element={<Acteurs />} />
-            <Route path="/films" element={<Films />} />
-            <Route path="/genres" element={<Genres />} />
-            <Route path="/rechercheAvancee" element={<RechercheAvancee />} />
-            <Route path="/realisateurs" element={<Realisateurs />} />
-          </Routes>
-        </div>
-      </Router>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/acteurs" element={<Acteurs />} />
+          <Route path="/films" element={<Films />} />
+          <Route path="/genres" element={<Genres />} />
+          <Route path="/rechercheAvancee" element={<RechercheAvancee />} />
+          <Route path="/realisateurs" element={<Realisateurs />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

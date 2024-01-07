@@ -9,6 +9,7 @@ import Modal from './Modal'; // Import Modal component
 
 const Realisateurs = () => {
     const [realisateurs, setRealisateurs] = useState([]);
+     // eslint-disable-next-line
     const [selectedItemIndex, setSelectedItemIndex] = useState(null);
     const [filteredRealisateurs, setFilteredRealisateurs] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);

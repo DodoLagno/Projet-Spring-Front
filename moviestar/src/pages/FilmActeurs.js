@@ -1,5 +1,7 @@
 // src/pages/FilmActeurs.js
+// eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line
 import axios from 'axios';
 
 const FilmActeurs = () => {

@@ -1,30 +1,34 @@
-/* Modal.css */
-.modal-overlay {
+/* ModifyActeurModal.css */
+.modify-acteur-modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.modify-acteur-modal.open {
+    display: flex;
+}
+
 .modal-content {
-    background: #ff0000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    max-height: 80vh; /* Ajout de la hauteur maximale */
-    overflow-y: auto; /* Ajout de la barre de défilement en cas de dépassement */
 }
 
 .modal-close {
-    background: #ffffff;
-    color: #ff0000;
+    background: #000000;
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
 }
+
+/* Add additional styling as needed */

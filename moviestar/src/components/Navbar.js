@@ -1,6 +1,6 @@
-// src/components/Navbar.js
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+// eslint-disable-next-line
+import { NavLink } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const Navbar = () => {
